@@ -1,11 +1,11 @@
-import './App.css'
-import Axios from './components/Axios'
+
+import Slider from './components/Slider'
 
 const App = () => {
 
   return(
     <>
-      asdf
+      <Slider />
     </>
   )
 }
