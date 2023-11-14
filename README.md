@@ -1,6 +1,14 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+axios.get('http://localhost:3000/users') // GET
+axios.post('http://localhost:3000/users', newUser) // CREATE
+axios.get('http://localhost:3000/users/' + id) // READ
+
+// Update // First need to get the id of user want to edit/update
+axios.get('http://localhost:3000/users/' + id)
+axios.put('http://localhost:3000/users/' + id, newUser) 
+
+axios.delete('http://localhost:3000/users/' + userId) // Delete
 
 Currently, two official plugins are available:
 
