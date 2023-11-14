@@ -2,7 +2,7 @@ import React from 'react';
 // Import Swiper React components
 import 'swiper/swiper-bundle.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y, EffectFlip, EffectFade, EffectCube, EffectCoverflow, EffectCards, EffectCreative } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, EffectFlip, EffectFade, EffectCube, EffectCoverflow, EffectCards, EffectCreative} from 'swiper/modules';
 
 const Slider = () => {
   return (
