@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { fetchPosts, updatePost, deletePost, createPost } from '../services/apiService'
 
 const Axios = () => {
+  
     const [posts, setPosts] = useState([])
 
     useEffect (() =>{

@@ -1,11 +1,10 @@
-
-import Slider from './components/Slider'
+import Main from "./CrudUsingJsonServer/Main"
 
 const App = () => {
 
   return(
     <>
-      <Slider />
+      <Main />
     </>
   )
 }
