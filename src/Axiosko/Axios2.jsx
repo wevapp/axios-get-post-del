@@ -47,13 +47,11 @@ const Axios2 = () => {
 
   // additional features search
   const [searchUser, setSearchUser] = useState('')
-
   const handleSearch = (e) => {
     // convert the search input to lowercase
     const searchPerson = e.target.value.toLowerCase()
     setSearchUser(searchPerson)
   }
-
   // convert the listUsers to lowercase to ignore case of each user want to search
   const filterUsers = listUsers.filter((user) => user.name.toLowerCase().includes(searchUser.toLowerCase()))
 
