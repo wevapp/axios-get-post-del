@@ -45,6 +45,18 @@ const Axios2 = () => {
     }
   }
 
+  // additional features search
+  const [searchUser, setSearchUser] = useState('')
+
+  const handleSearch = (e) => {
+    // convert the search input to lowercase
+    const searchPerson = e.target.value.toLowerCase()
+    setSearchUser(searchPerson)
+  }
+
+  // convert the listUsers to lowercase to ignore case of each user want to search
+  const filterUsers = listUsers.filter((user) => user.name.toLowerCase().includes(searchUser.toLowerCase()))
+
   return (
     <div>
       <div>
@@ -59,8 +71,15 @@ const Axios2 = () => {
           <input type="text" className='border-2 my-2' ref={inputRef}
             onChange={(e) => setNewUser({...newUser, age: e.target.value})}/>
         </div>
-        <button className='bg-green-400 p-1 mb-2'
-          onClick={handleSubmit}>Add</button>
+        <div className='w-[400px] flex justify-between'>
+          <button className='bg-green-400 p-1 mb-2'
+            onClick={handleSubmit}>Add</button>
+            <div>
+              <label htmlFor="age">Search </label>
+              <input type="text" className='border-2 my-2' ref={inputRef}
+                onChange={handleSearch}/>
+            </div>
+        </div>
       </div>
       <table className='border w-[500px]'>
         <thead>
@@ -72,7 +91,7 @@ const Axios2 = () => {
         </thead>
         <tbody>
           {
-            listUsers.map((user, index) => (
+            filterUsers.map((user, index) => (
               <tr key={index}>
                 <td>{user.id}</td>
                 <td>{user.name}</td>
