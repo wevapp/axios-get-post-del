@@ -1,9 +1,10 @@
+import Axios2 from "./components/Axios2"
 
 const App = () => {
 
   return(
     <>
-    ap
+      <Axios2 />
     </>
   )
 }
