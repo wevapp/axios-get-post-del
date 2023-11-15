@@ -2,13 +2,20 @@
 
 axios.get('http://localhost:3000/users') // GET
 axios.post('http://localhost:3000/users', newUser) // CREATE
-axios.get('http://localhost:3000/users/' + id) // READ
 
-// Update // First need to get the id of user want to edit/update
+// Need the axios.get then the id of user to get specific user want to read
+axios.get('http://localhost:3000/users/' + id) // Read
+
+// Update //  To update, First use axios.get then axios.put
 axios.get('http://localhost:3000/users/' + id)
 axios.put('http://localhost:3000/users/' + id, newUser) 
 
 axios.delete('http://localhost:3000/users/' + userId) // Delete
+
+
+
+best tailwind Library
+Tailblocks
 
 Currently, two official plugins are available:
 
