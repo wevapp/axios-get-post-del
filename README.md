@@ -3,10 +3,12 @@
 axios.get('http://localhost:3000/users') // GET
 axios.post('http://localhost:3000/users', newUser) // CREATE
 
-// Need the axios.get then the id of user to get specific user want to read
+// To READ data, first put the user.id to Link want to read
+// then use axios.get then put the useParams(id) to read
 axios.get('http://localhost:3000/users/' + id) // Read
 
-// Update //  To update, First use axios.get then axios.put
+// To Edit data, first put the user.id to Link want to Edit
+// then, First use axios.get then axios.put (note: useParams id)
 axios.get('http://localhost:3000/users/' + id)
 axios.put('http://localhost:3000/users/' + id, newUser) 
 
