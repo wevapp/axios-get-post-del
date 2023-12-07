@@ -1,10 +1,11 @@
-import Axios from "./components/Axios"
+
+import AxiosHome from "./Axiosko/AxiosHome"
 
 const App = () => {
 
   return(
     <>
-     <Axios />
+    <AxiosHome />
     </>
   )
 }
